@@ -15,16 +15,11 @@
 1. Clone the repository
 2. Open the project in your IDE: IntelliJ IDEA (recommended) or Eclipse
     * If you are using IntelliJ IDEA, make sure the IDE opens project as **Maven** and recognizes the project as a Spring Boot project. Also, you must change the working directory of the project so that the views (the actual web pages to be shown) are found by Spring Boot (check out [Web Directories IntelliJ IDEA](#web-directories).
-3. Make sure you are in the `JtProject` directory
-4. Configure the database connection in `application.properties` file (check the [Database](#database) section below for more info)
-5. Run the project (by running the `main` method in `JtSpringProjectApplication.java`)
+3. Make sure you are in the `GroceriesProject` directory
+4. Configure the database connection in `application.properties` file 
+5. Run the project (by running the `main` method in `GroceriesProjectProjectApplication.java`)
 6. Open http://localhost:8080/ in your browser!
-   * If you ran the [`basedata.sql`](https://github.com/jaygajera17/E-commerce-project-springBoot/blob/master2/JtProject/basedata.sql)script on the database, you can log in with the following credentials as admin; otherwise you'll have to manually create an admin user in the database:
-     * Username: `admin`
-     * Password: `123`
-   * Log in as a normal user:
-     * Username: `lisa`
-     * Password: `765`
+  
 
 ### Database
 
@@ -47,16 +42,14 @@ Having done that, you must create some base data in the database. You can do tha
 The views are located in `src/main/webapp/views`, but for some reason, Spring Boot doesn't recognize that directory. To remedy this, you must change the working directory of the project in your IDE. If you're using IntelliJ IDEA, follow these steps:
 
 1. Click on the "Edit Configurations..." button in the top right corner of the IDE
-2. Click on the `JtSpringProjectApplication` configuration
+2. Click on the `GroceriesProjectApplication` configuration
 3. Change the "Working directory" option (if not present, click on "Modify Options" and select from the list) to the `$MODULE_WORKING_DIR$` macro
 4. Click "Apply" and "OK"
 
 
 When you run the project, the views should be found by Spring Boot and you should see a login page in http://localhost:8080/ (if not logged in previously)!
-![configurations](image.png)
 
-# Workflow
-- ![image](https://github.com/jaygajera17/E-commerce-project-springBoot/assets/81226571/69951cb7-65e2-4225-8681-2542859aaec6)
+
 ### Controller
 - control the endpoint and also send data to view( we use ModelAndView method)
 - ``` @GetMapping("login")
